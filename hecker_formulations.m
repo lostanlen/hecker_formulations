@@ -1,5 +1,5 @@
 % List files.
-addpath(genpath('../..'));
+addpath(genpath('~/scattering.m'));
 data_dir = '/scratch/vl1019/hecker_formulations_data';
 files = list_dir(data_dir);
 file_names = {files.name};
