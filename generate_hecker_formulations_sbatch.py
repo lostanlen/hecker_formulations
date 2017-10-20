@@ -9,7 +9,7 @@ for file_id in range(1, 1+n_files):
     # Define file path.
     job_name = "hecker_formulations_" + str(file_id).zfill(2)
     file_name = job_name + ".sbatch"
-    file_path = os.path.join(sbatch_dir, file_name)
+    file_path = os.path.join("sbatch", file_name)
 
 
     # Open file.
@@ -25,6 +25,9 @@ for file_id in range(1, 1+n_files):
         f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
         f.write("\n")
         f.write("module purge\n")
+        f.write("module load/matlab2017a\n")
         f.write("\n")
-        f.write("# The argument is the name of the recording unit.\n")
-        f.write("python " + script_path_with_args)
+        f.write("# The argument is the ID of the file.\n")
+        f.write("matlab -nosplash -nodesktop -nodisplay -r " +
+            "\"file_id = '" + str(file_id).zfill(2) + "'; " +
+            "run('../hecker_formulations');\"")
