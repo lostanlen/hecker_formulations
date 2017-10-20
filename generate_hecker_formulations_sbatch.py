@@ -29,5 +29,5 @@ for file_id in range(1, 1+n_files):
         f.write("\n")
         f.write("# The argument is the ID of the file.\n")
         f.write("matlab -nosplash -nodesktop -nodisplay -r " +
-            "\"file_id = '" + str(file_id).zfill(2) + "'; " +
+            "\"file_id = " + str(file_id).zfill(2) + "; " +
             "run('../hecker_formulations');\"")
