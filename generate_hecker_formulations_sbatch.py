@@ -25,7 +25,7 @@ for file_id in range(1, 1+n_files):
         f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
         f.write("\n")
         f.write("module purge\n")
-        f.write("module load matlab2017a\n")
+        f.write("module load matlab/2017a\n")
         f.write("\n")
         f.write("# The argument is the ID of the file.\n")
         f.write("matlab -nosplash -nodesktop -nodisplay -r " +
