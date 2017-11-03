@@ -229,7 +229,7 @@ end
 text = sprintf([S_lines{:}]);
 
 % Export text as CSV file.
-text_path = ['text/', file_name(1:(end-4)), '.csv'];
+text_path = ['csv/', file_name(1:(end-4)), '.csv'];
 fileID = fopen(text_path, 'w');
 fprintf(fileID, text);
 fclose(fileID);
