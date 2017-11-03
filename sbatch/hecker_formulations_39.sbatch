@@ -9,7 +9,7 @@
 #SBATCH --output=../slurm/slurm_hecker_formulations_39_%j.out
 
 module purge
-module load matlab2017a
+module load matlab/2017a
 
 # The argument is the ID of the file.
 matlab -nosplash -nodesktop -nodisplay -r "file_id = 39; run('../hecker_formulations.m');"
