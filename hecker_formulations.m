@@ -25,6 +25,8 @@ waveform_length = length(waveform);
 n_batches = floor(waveform_length / batch_length);
 S_batches = cell(1, n_batches);
 
+tic();
+
 % Loop over batches.
 for batch_id = 1:n_batches
 
@@ -231,3 +233,5 @@ text_path = ['text/', file_name(1:(end-4)), '.csv'];
 fileID = fopen(text_path, 'w');
 fprintf(fileID, text);
 fclose(fileID);
+
+toc();
