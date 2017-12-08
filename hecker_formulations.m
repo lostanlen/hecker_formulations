@@ -12,7 +12,7 @@ T = 2^16;
 batch_length = 2^20;
 modulations = 'time-frequency';
 wavelets = 'morlet';
-nLines = inf;
+nLines = 2134;
 archs = eca_setup(Q1, T, modulations, wavelets);
 
 % Load waveform.
