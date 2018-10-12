@@ -5,7 +5,7 @@ file_path = 'sbatch/hecker_formulations.sh'
 os.makedirs("sbatch", exist_ok=True)
 os.makedirs("slurm", exist_ok=True)
 os.makedirs("text", exist_ok=True)
-n_files = 72
+n_files = 250
 
 # Open shell file.
 with open(file_path, "w") as f:
